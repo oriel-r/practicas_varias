@@ -29,7 +29,31 @@ console.log(cursoTotalyPorcentaje(claseQuimica));
 // Hacer una funcion que reciba un objeto el cual contiene empleados y su sueldo bruto
 // con esto calculo un aumento del mismo en un 30% y retorne el mismo objeto con los nuevos valores
 // Ejempplo de objeto: {Juan: 623200, Maria: 738100, Analia: 920320, Julio: 489500}
+function aumentoDeSueldo(objt) {
+  for (propiedad in objt) {
+    objt[propiedad] = Math.ceil(objt[propiedad] * 1.3);
+  }
+  return objt;
+}
+var empresa_1 = {
+  pepe: 2000,
+  juan: 3500,
+  maria: 4789,
+  pedro: 6234,
+  ana: 7890,
+};
+var empresa_2 = {
+  ana: 4567,
+  pedro: 8901,
+  maria: 2345,
+};
+var empresa_3 = {
+  isabel: 9876,
+  francisco: 2000,
+  sofia: 6789,
+};
 
+console.log(aumentoDeSueldo(empresa_2)); 
 
 // Hacer una funcion que reciba un objeto con nombres y notas de una materia
 // a partir de esto,  calcula el promedio y arroja un nuevo objeto que nos diga quienes han
